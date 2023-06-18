@@ -1,12 +1,11 @@
 #include<stdio.h>
 /**
-  * main - Entry point of program
-  * Description - using puts function
-  *
-  * Return: (0) if success
-  */
+ *main-Entry point of program
+ *description-program using puts instead of printf
+ *Return:0(success)
+ */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
-	return (0);
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
 }
