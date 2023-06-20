@@ -1,34 +1,15 @@
 #include "main.h"
-/* More header files goes here */
-
-/*Function prototype declaration*/
-void print_alphabet(void);
-
 /**
- * main-Entry point of the program
- * Return: 0 (success)
+ * print_alphabet-entry point
+ * Return:0(success)
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-/**
- * print_alphabet-Prints the alphabet in lowercase
- * Return:(0)
- */
-
 void print_alphabet(void)
 {
-	int a = 97;
+	int i;
 
-	while (a <= 122)
+	for (i = 97; i <= 122; i++)
 	{
-		_putchar(a);
-		a++;
+		_putchar(i);
 	}
-
 	_putchar('\n');
-	return (0);
 }
