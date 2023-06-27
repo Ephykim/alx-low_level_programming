@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include "main.h"
+/*add more header files here*/
 
 /**
-  * main-fizzbuzz challenge
-  * Return: 0
+  * main-Entry point of program
+  * Return: (0)
   */
 
 int main(void)
@@ -12,13 +14,13 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		if ((i % 3 == 0) && (i % 5 == 0))
-			printf("FizzBuzz\n\n");
+			printf("FizzBuzz\n");
 		else if (i % 3 == 0)
-			printf("Fizz\n\n");
+			printf("Fizz\n");
 		else if (i % 5 == 0)
-			printf("Buzz\n\n");
+			printf("Buzz\n");
 		else
-			printf("%d\n\n", i);
+			printf("%d\n", i);
 	}
 	return (0);
 }
