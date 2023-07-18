@@ -1,34 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 
 /**
-  * main-Entry point of program
-  * @argc: Argument count
-  * @argv: Argument Vector
+  * isNumber-Checks if a string has digits
+  * @num: Pointer to the string
   *
-  * Return: (0) when success
+  * Return: Boolean value
   */
 
-int main(int argc, char *argv[])
+bool isNumber(char *num)
 {
-	int i, sum = 0;
+	int len, i;
+	bool isnum = true;
 
-	if (argc == 1)
-		printf("%d\n", 0);
+	len = strlen(num);
+	for (i = 0; i < len; i++)
+	{
+		if (!(num[i] >= '0' && num[i] <= '9'))
+		{
+			isnum = false;
+			break;
+		}
+	}
+	return (isnum);
+}
+
+/**
+  * main-Entry point of the program
+  * @argc: Argument count
+  * @argv: Argument vector
+  *
+  * Return: (0)
+  */
+
+int main(int argc, char **argv)
+{
+	int sum = 0;
+	int i, number;
+
+	if (argc < 2)
+	{
+		putchar('0');
+		putchar('\n');
+	}
 	for (i = 1; i < argc; i++)
 	{
-
-		if (*argv[i] >= '0' && *argv[i] <= '9')
+		if (!(isNumber(argv[i])))
 		{
-			int x = atoi(argv[i]);
-
-			sum += x;
+			printf("Error\n");
+			return (1);
 		}
 		else
 		{
-			sum = 0;
-			printf("Error\n");
-			return (1);
+			number = atoi(argv[i]);
+			sum += number;
 		}
 	}
 	if (sum != 0)
