@@ -1,4 +1,5 @@
 #include <stdio.h>
+void print_main(void) __attribute__((constructor));
 
 /**
   * print_main-Prints string to the console
